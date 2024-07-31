@@ -2,6 +2,7 @@
   "name": "tasjen",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://www.tasjen.pro",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
