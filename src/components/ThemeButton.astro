@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  className?: string;
+}
+const { className = "" } = Astro.props;
+---
+
+<button type="button" id="theme-selector" class={className}>
+  <Icon name="themes/moon" class="hidden dark:inline" />
+  <Icon name="themes/sun" class="inline dark:hidden" />
+</button>
+
+<script>
+  document.getElementById("theme-selector")?.addEventListener("click", () => {
+    if (localStorage.theme === "dark") {
+      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark");
+    } else {
+      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark");
+    }
+  });
+</script>
